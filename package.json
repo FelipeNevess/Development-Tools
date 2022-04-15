@@ -1,0 +1,10 @@
+{
+  "name": "development-tools",
+  "version": "0.0.1",
+  "description": "Development tools is a mini guide for installing and configuring web development tools",
+  "main": "index.js",
+  "repository": "https://github.com/FelipeNevess/Development-Tools",
+  "author": "Felipe Neves",
+  "license": "MIT",
+  "private": false
+}
