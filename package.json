@@ -6,5 +6,11 @@
   "repository": "https://github.com/FelipeNevess/Development-Tools",
   "author": "Felipe Neves",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "install:apps:npm": "(cd app && cd client && npm install && cd .. && cd server && npm install)",
+    "install:apps:yarn": "(cd app && cd client && yarn install && cd .. && cd server && yarn install)",
+    "compose:up": "(cd app && docker-compose up -d --build)",
+    "compose:down": "(cd app && docker-compose down --remove-orphans)"
+  }
 }
