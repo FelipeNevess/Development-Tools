@@ -1,14 +1,20 @@
-FROM node:16-alpine
+# ARG TAG=16-alpine
+# ARG VITE_REPO=https://github.com/vitejs/vite.git
+# ARG VITE_DIR=vite
 
-WORKDIR /app
+# FROM node:alpine
 
-COPY package*.json .
-RUN npm install
+# ENV VITE_REPO=$VITE_REPO
+# ENV VITE_DIR=$VITE_DIR
 
-COPY . .
+# WORKDIR /app
 
-EXPOSE $PORT
+# COPY package*.json .
 
-ENV NUXT_PORT=$PORT
+# RUN npm install
 
-CMD [ "npm", "start" ]
+# COPY . .
+
+# EXPOSE 3000
+
+# CMD ["npm run dev"]
