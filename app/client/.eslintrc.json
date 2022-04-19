@@ -11,9 +11,11 @@
     "react/prop-types": "off",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-    "react/self-closing-comp": "warn"
+    "react/self-closing-comp": "warn",
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
   },
-  "plugins": ["react", "import", "jsx-a11y"],
+  "plugins": ["react", "import", "jsx-a11y", "stylelint-scss"],
   "parserOptions": {
     "ecmaVersion": 2021,
     "sourceType": "module",
