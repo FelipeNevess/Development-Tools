@@ -1,0 +1,98 @@
+$display-flex: flex;
+$content-center: center;
+
+$width-icons: 32px;
+$height-icons: 32px;
+
+@mixin afterMessage() {
+  content: '';
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  margin-left: -5px;
+  margin-top: 4px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(208, 208, 208) transparent transparent transparent;
+}
+
+@mixin message-balloon() {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  display: none;
+  position: absolute;
+  color: rgb(110, 109, 109);
+  text-align: center;
+  border-radius: 6px;
+  bottom: 60px;
+}
+
+.content-menu {
+  width: 100%;
+  background-color: #282727;
+  bottom: 0;
+  margin: 0;
+  position: fixed;
+  padding: 10px;
+
+  nav {
+    ul {
+      display: $display-flex;
+      justify-content: $content-center;
+
+      li {
+        display: flex;
+        flex-direction: column;
+
+        svg {
+          width: $width-icons;
+          height: $height-icons;
+        }
+
+        svg:hover {
+          cursor: pointer;
+          color: rgb(194, 185, 185);
+        }
+      }
+
+      li:hover .span-home {
+        display: block;
+      }
+
+      .span-home {
+        @include message-balloon();
+      }
+
+      .span-home::after {
+        @include afterMessage();
+      }
+
+      div {
+        width: 90%;
+        display: $display-flex;
+        justify-content: $content-center;
+
+        li {
+          display: flex;
+          padding: 0 18px;
+          align-items: center;
+        }
+
+        @for $i from 1 to 10 {
+          .l#{$i}:hover span {
+            display: block;
+          }
+
+          .l#{$i} span::after {
+            @include afterMessage();
+          }
+
+          .l#{$i} span {
+            @include message-balloon();
+          }
+        }
+      }
+    }
+  }
+}
