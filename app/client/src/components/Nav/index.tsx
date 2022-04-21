@@ -23,7 +23,7 @@ function Nav() {
                 return (
                   <li className={`l${i}`} key={i} >
                     <span>{ icon.title }</span>
-                    <Link to={`${icon.to}`}>
+                    <Link to={`/${icon.to}`}>
                       { <icon.inc className={`cvg${i}-${active} svg-dark-${active}`} /> }
                     </Link>
                   </li>
