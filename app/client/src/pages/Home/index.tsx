@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-import { Menu } from '../../components';
+import { Menu, DarkMode } from '../../components';
+import { DarkModeContext } from '../../context/DarkModeProvider';
+
+import Logo from '../../assets/logo.png';
+
+import './styles.scss';
 
 function Home() {
+  const { active } = useContext(DarkModeContext).context;
+
   return (
-    <div>
-      <p>Home</p>
+    <section className={`content-home dark-mode-${active}`}>
+      <DarkMode />
+      <figure>
+        <img src={ Logo } alt="logo" />
+      </figure>
       <Menu />
-    </div>
+    </section>
   );
 }
 

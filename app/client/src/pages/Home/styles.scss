@@ -1,0 +1,16 @@
+.content-home {
+  height: 92.5vh;
+  display: flex;
+  justify-content: center;
+
+  figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 38%;
+      min-width: 200px;
+    }
+  }
+}
