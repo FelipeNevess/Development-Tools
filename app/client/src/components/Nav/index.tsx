@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Icons, AiFillHome } from './utils/icons';
 import { DarkModeContext } from '../../context/DarkModeProvider';
@@ -11,7 +12,9 @@ function Nav() {
       <ul>
         <li className="l10">
           <span className="span-home">Home</span>
-          { <AiFillHome className={`cvg10-${active} svg-dark-${active}` } /> }
+          <Link to="/">
+            { <AiFillHome className={`cvg10-${active} svg-dark-${active}` } /> }
+          </Link>
         </li>
         <div>
           {
@@ -20,7 +23,9 @@ function Nav() {
                 return (
                   <li className={`l${i}`} key={i} >
                     <span>{ icon.title }</span>
-                    { <icon.inc className={`cvg${i}-${active} svg-dark-${active}`} /> }
+                    <Link to={`${icon.to}`}>
+                      { <icon.inc className={`cvg${i}-${active} svg-dark-${active}`} /> }
+                    </Link>
                   </li>
                 );
               }
