@@ -1,10 +1,15 @@
 import React from 'react';
 
 import Routes from './routes';
+import { GlobalContext } from './context';
 
 function App() {
   return (
-    <Routes />
+    <main>
+      <GlobalContext>
+        <Routes />
+      </GlobalContext>
+    </main>
   );
 }
 
