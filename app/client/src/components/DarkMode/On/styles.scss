@@ -1,0 +1,19 @@
+.content-mode-true {
+  justify-content: flex-end;
+
+  .button-active-true {
+    transition: 1s;
+    background-color: #f5f5f5;
+  }
+
+  .button-active-true:hover {
+    cursor: pointer;
+    background-color: #a9a8a8;
+  }
+
+}
+
+.dark-mode-true {
+  transition: 1.5s;
+  background-color: #353432;
+}
