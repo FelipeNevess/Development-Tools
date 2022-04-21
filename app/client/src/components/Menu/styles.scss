@@ -12,13 +12,13 @@ $color-c2: black;
 @mixin afterMessage() {
   content: '';
   position: absolute;
-  top: 80%;
+  top: 72%;
   left: 50%;
   margin-left: -5px;
   margin-top: 4px;
-  border-width: 5px;
+  border-width: 4px;
   border-style: solid;
-  border-color: rgb(208, 208, 208) transparent transparent transparent;
+  border-color: rgba(148, 148, 148, 0.439) transparent transparent transparent;
 }
 
 @mixin message-balloon() {
@@ -28,8 +28,6 @@ $color-c2: black;
   display: none;
   position: absolute;
   color: rgb(110, 109, 109);
-  text-align: center;
-  border-radius: 6px;
   bottom: 60px;
 }
 
@@ -47,7 +45,6 @@ $color-c2: black;
       justify-content: $content-center;
 
       li {
-        display: flex;
         flex-direction: column;
 
         svg {
