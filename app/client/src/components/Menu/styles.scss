@@ -4,6 +4,11 @@ $content-center: center;
 $width-icons: 32px;
 $height-icons: 32px;
 
+$second: 1.5s;
+
+$color-c1: #9b9b9b;
+$color-c2: black;
+
 @mixin afterMessage() {
   content: '';
   position: absolute;
@@ -52,7 +57,44 @@ $height-icons: 32px;
 
         svg:hover {
           cursor: pointer;
-          color: rgb(194, 185, 185);
+        }
+
+        .svg-dark-true, .svg-dark-false {
+          transition: $second;
+        }
+
+        .svg-dark-true {
+          color: $color-c2;
+        }
+
+        .svg-dark-false {
+          color: $color-c1;
+        }
+
+        .cvg10-true:hover, .cvg10-false:hover {
+          transition: none !important;
+        }
+
+        .cvg10-true:hover {
+          color: $color-c1;
+        }
+
+        .cvg10-false:hover {
+          color: $color-c2;
+        }
+
+        @for $i from 1 to 10 {
+          .cvg#{$i}-false:hover {
+            color: $color-c2;
+          }
+
+          .cvg#{$i}-true:hover {
+            color: $color-c1;
+          }
+
+          .cvg#{$i}-false:hover, .cvg#{$i}-true:hover {
+            transition: none !important;
+          }
         }
       }
 
