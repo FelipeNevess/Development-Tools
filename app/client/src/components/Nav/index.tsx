@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 import { Icons, AiFillHome } from './utils/icons';
-import { DarkModeContext } from '../../../context/DarkModeProvider';
+import { DarkModeContext } from '../../context/DarkModeProvider';
 
 function Nav() {
   const { active } = useContext(DarkModeContext).context;
