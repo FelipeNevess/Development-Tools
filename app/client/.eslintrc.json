@@ -1,37 +1,63 @@
 {
-  "extends": [
-    "eslint:recommended",
-    "plugin:import/errors",
+  "env":{
+     "browser":true,
+     "es2021":true
+  },
+  "extends":[
+    "airbnb",
+    "prettier",
     "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react-hooks/recommended",
-    "prettier"
+    "plugin:@typescript-eslint/recommended"
   ],
-  "rules": {
-    "react/prop-types": "off",
-    "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/self-closing-comp": "warn",
-    "at-rule-no-unknown": null,
-    "scss/at-rule-no-unknown": true
+  "parser":"@typescript-eslint/parser",
+  "parserOptions":{
+     "ecmaFeatures":{
+        "jsx":true
+     },
+     "ecmaVersion":12,
+     "sourceType":"module"
   },
-  "plugins": ["react", "import", "jsx-a11y", "stylelint-scss"],
-  "parserOptions": {
-    "ecmaVersion": 2021,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
+  "plugins":[
+     "react",
+     "@typescript-eslint",
+     "react-hooks"
+  ],
+  "rules":{
+     "no-use-before-define":"off",
+     "@typescript-eslint/no-use-before-define":[
+        "error"
+     ],
+     "react/jsx-filename-extension":[
+        "warn",
+        {
+           "extensions":[
+              ".tsx"
+           ]
+        }
+     ],
+     "import/extensions":[
+        "error",
+        "ignorePackages",
+        {
+           "ts":"never",
+           "tsx":"never"
+        }
+     ],
+     "no-shadow":"off",
+     "@typescript-eslint/no-shadow":[
+        "error"
+     ],
+     "@typescript-eslint/explicit-function-return-type": "off",
+     "react-hooks/rules-of-hooks":"error",
+     "react-hooks/exhaustive-deps":"warn",
+     "import/prefer-default-export":"off",
+     "react/prop-types":"off"
   },
-  "env": {
-    "es6": true,
-    "browser": true,
-    "jest": true,
-    "node": true
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
+  "settings":{
+     "import/resolver":{
+        "typescript":{
+
+        }
+     }
   }
 }
