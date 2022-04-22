@@ -5,11 +5,9 @@ import { GlobalContext } from './context';
 
 function App() {
   return (
-    <main>
-      <GlobalContext>
-        <Routes />
-      </GlobalContext>
-    </main>
+    <GlobalContext>
+      <Routes />
+    </GlobalContext>
   );
 }
 
