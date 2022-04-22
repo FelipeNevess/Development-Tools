@@ -10,7 +10,7 @@ function DarkMode() {
   const handleClick = (): void => {
     localStorage.setItem('darkMode', JSON.stringify(!active));
     setActive(!active);
-  }
+  };
 
   useEffect(() => {
     const darkMode = JSON.parse(localStorage.getItem('darkMode'));
@@ -18,16 +18,18 @@ function DarkMode() {
     if (darkMode !== null) {
       setActive(Boolean(darkMode));
     }
-  }, []);
+  }, [setActive]);
 
   return (
-    <div className={ `content-mode-${active}` }>
-      <button
-        type="button"
-        onClick={ handleClick }
-        className={ `button-active-${active}` }
-      />
-    </div>
+    <header>
+      <div className={`content-mode-${active}`}>
+        <input
+          type="button"
+          onClick={handleClick}
+          className={`button-active-${active}`}
+        />
+      </div>
+    </header>
   );
 }
 

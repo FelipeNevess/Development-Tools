@@ -16,4 +16,22 @@
 .dark-mode-true {
   transition: 1.5s;
   background-color: #353432;
+
+  h4 {
+    color: #cdcdcd;
+  }
+
+  .nav-filter {
+    a {
+      color: #818181a6;
+    }
+  }
+
+  main {
+    article {
+      p {
+        color: #939393;
+      }
+    }
+  }
 }
