@@ -1,0 +1,19 @@
+.nav-filter {
+  ul {
+    display: flex;
+    margin-left: 6%;
+
+    a {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 300;
+      padding-right: 40px;
+      color: #404040;
+      text-decoration: none;
+    }
+
+    a:hover {
+      cursor: pointer;
+      color: #000000;
+    }
+  }
+}
