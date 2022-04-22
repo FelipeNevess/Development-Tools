@@ -1,0 +1,50 @@
+$flex-center: center;
+$svg-width: 82%;
+
+.section-page, .content-page .con-1, .con-1 div, i, .con-2 main {
+  display: flex;
+  justify-content: $flex-center;
+}
+
+.section-page {
+  width: 100%;
+  min-height: 100vh;
+
+  .content-page {
+    width: 75%;
+    min-height: 100vh;
+
+    .con-1 {
+      div {
+        flex-direction: column;
+        align-items: $flex-center;
+        width: 250px;
+        height: 200px;
+        margin: 45px 0 10px 0;
+
+        i, svg {
+          width: $svg-width;
+          height: $svg-width;
+        }
+
+        h4 {
+          font-size: 25px;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .con-2 {
+      min-height: 50vh;
+      padding: 20px 5px;
+
+      main {
+        article {
+          width: 88%;
+          margin-top: 38px;
+        }
+      }
+    }
+  }
+}
