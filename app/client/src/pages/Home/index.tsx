@@ -11,13 +11,17 @@ function Home() {
   const { active } = useContext(DarkModeContext).context;
 
   return (
-    <section className={`content-home dark-mode-${active}`}>
+    <>
       <DarkMode />
-      <figure>
-        <img src={ Logo } alt="logo" />
-      </figure>
-      <Menu />
-    </section>
+      <main>
+        <section className={`content-home dark-mode-${active}`}>
+          <figure>
+            <img src={ Logo } alt="logo" />
+          </figure>
+          <Menu />
+        </section>
+      </main>
+    </>
   );
 }
 
