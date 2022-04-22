@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { DarkModeProvider } from './DarkModeProvider';
 import { Iprops } from './DarkModeProvider/interfaces';
 

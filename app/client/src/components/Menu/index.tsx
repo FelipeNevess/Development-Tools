@@ -6,7 +6,7 @@ import './styles.scss';
 
 function Menu() {
   return (
-    <menu className='content-menu'>
+    <menu className="content-menu">
       <Nav />
     </menu>
   );
