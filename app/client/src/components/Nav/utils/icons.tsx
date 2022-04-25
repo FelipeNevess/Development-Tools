@@ -14,7 +14,7 @@ const Icons: IICons[] = ([
   {
     inc: FaWindows,
     title: 'Windows Install',
-    to: 'windows/about'
+    to: 'windows'
   },
   {
     inc: SiGooglechrome,
