@@ -1,24 +1,20 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 
 import { DarkModeContext } from '../../context/DarkModeProvider';
+import { useEffectHook } from '../../hooks';
 
 import './styles.scss';
 
 function DarkMode() {
   const { active, setActive } = useContext(DarkModeContext).context;
+  const darkMode = JSON.parse(localStorage.getItem('darkMode')) as string;
 
   const handleClick = (): void => {
     localStorage.setItem('darkMode', JSON.stringify(!active));
     setActive(!active);
   };
 
-  useEffect(() => {
-    const darkMode = JSON.parse(localStorage.getItem('darkMode'));
-
-    if (darkMode !== null) {
-      setActive(Boolean(darkMode));
-    }
-  }, [setActive]);
+  useEffectHook({ darkMode, setActive });
 
   return (
     <header>
