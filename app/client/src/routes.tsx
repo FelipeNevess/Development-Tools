@@ -3,9 +3,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import {
   Home,
-  WindowsAbout,
-  WindowsInstall,
-  WindowsSettings
+  Windows,
 } from './pages';
 
 
@@ -15,9 +13,7 @@ function Router() {
       <Routes>
         <Route path="/" element={ <Home /> }  />
 
-        <Route path="/windows/about" element={ <WindowsAbout /> }  />
-        <Route path="/windows/install" element={ <WindowsInstall /> }  />
-        <Route path="/windows/settings" element={ <WindowsSettings /> }  />
+        <Route path="/windows" element={ <Windows /> }  />
       </Routes>
     </BrowserRouter>
   );
