@@ -14,7 +14,7 @@ const data = [
   {
     title: 'windows',
     about: AboutWindows(),
-    installations: WindowsInstall(),
+    installations: WindowsInstall,
     settings: WindowsSettings(),
   },
 ];
