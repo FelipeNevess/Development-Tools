@@ -5,6 +5,7 @@ import { IRequest } from './interface';
 import DarkMode from '../DarkMode';
 
 import { DarkModeContext }  from '../../context/DarkModeProvider';
+import Selected from '../Selected';
 
 import './styles.scss';
 
@@ -12,7 +13,8 @@ function PageStructure({
   icon,
   title,
   filter,
-  filterLinux
+  filterLinux,
+  filterPage
 }: IRequest): JSX.Element {
   const { active } = useContext(DarkModeContext).context;
 
@@ -30,6 +32,14 @@ function PageStructure({
           <div className="con-2">
             { filter }
             { filterLinux }
+            {
+              filterPage &&
+              <Selected
+                about={ filterPage.about }
+                installations={ filterPage.installations }
+                settings={ filterPage.settings }
+              />
+            }
           </div>
         </div>
         <Menu />
