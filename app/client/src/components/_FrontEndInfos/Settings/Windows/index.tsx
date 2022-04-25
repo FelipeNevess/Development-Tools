@@ -1,8 +1,10 @@
 import React from 'react';
 
+import Main from '../../../Main';
+
 function WindowsSettings() {
   return (
-    <main>
+    <Main mainClass='main-settings-windows'>
       <article>
         <p>
           O Windows 10 é a versão mais recente do sistema operacional da Microsoft e representa
@@ -23,7 +25,7 @@ function WindowsSettings() {
           essas novidades.
         </p>
       </article>
-    </main>
+    </Main>
   );
 }
 

@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Main from '../../../Main';
+
 import './styles.scss';
 
 function AboutWindows() {
   return (
-    <main className="main-about-windows">
+    <Main mainClass='main-about-windows'>
       <article>
         <p>
           O Windows 10 é a versão mais recente do sistema operacional da Microsoft e representa
@@ -23,7 +25,7 @@ function AboutWindows() {
           Com abordagem mais convencional, o Windows 10 funciona bem em telas touch e em desktops.
         </p>
       </article>
-    </main>
+    </Main>
   );
 }
 
