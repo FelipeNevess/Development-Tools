@@ -1,0 +1,24 @@
+.main-install-windows {
+  article {
+    display: flex;
+    justify-content: center;
+
+    div {
+      margin-top: 30px;
+      width: 88%;
+
+      p {
+        font-family: "Open Sans", sans-serif;
+        line-height: 1.4;
+        padding: 25px 0;
+      }
+
+      figure {
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

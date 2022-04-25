@@ -11,7 +11,7 @@ $svg-width: 82%;
   min-height: 100vh;
 
   .content-page {
-    width: 75%;
+    width: 80%;
     min-height: 100vh;
 
     .con-1 {
@@ -38,13 +38,7 @@ $svg-width: 82%;
     .con-2 {
       min-height: 50vh;
       padding: 20px 5px;
-
-      main {
-        article {
-          width: 88%;
-          margin-top: 38px;
-        }
-      }
+      margin-bottom: 50px;
     }
   }
 }

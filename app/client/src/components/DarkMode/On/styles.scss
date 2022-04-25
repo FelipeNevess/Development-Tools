@@ -22,8 +22,12 @@
   }
 
   .nav-filter {
-    a {
-      color: #818181a6;
+    li {
+      a {
+        span {
+          color: #818181a6;
+        }
+      }
     }
   }
 
