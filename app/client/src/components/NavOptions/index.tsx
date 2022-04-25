@@ -1,5 +1,8 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+
+import NavBar from '../NavBar';
+import { HandleSelected  } from '../../utils';
+
 import { IRequest } from './interface';
 
 import './styles.scss';
@@ -9,18 +12,51 @@ function NavOptions({
   projects,
   requirements,
   settings,
-  pageName
 }: IRequest) {
+  const { handleClick, result } = HandleSelected();
+
+  useEffect(() => {
+    handleClick();
+  }, [handleClick, result]);
+
   return (
-    <nav className="nav-filter">
-      <ul>
-        <Link to={ `/${pageName}/about` }>Sobre</Link>
-        { installation && (<Link to={ `/${pageName}/install` }>Instalação</Link>) }
-        { projects && (<Link to={ `/${pageName}/projects`}>Projetos</Link>) }
-        { requirements && (<Link to={ `/${pageName}/requirements`}>Requisitos</Link>) }
-        { settings && (<Link to={ `/${pageName}/settings`}>Configurações</Link>) }
-      </ul>
-    </nav>
+    <NavBar
+      navClass='nav-filter'
+      reff={ result }
+    >
+      <li>
+        <a href="#about">
+          <span className="selected">Sobre</span>
+        </a>
+      </li>
+      {
+        installation && (<li>
+          <a href="#install">
+            <span>Instalação</span>
+          </a>
+        </li>)
+      }
+      {
+        projects && (<li>
+          <a href="#projects">
+            <span>Projetos</span>
+          </a>
+        </li>)
+      }
+      { requirements && (<li>
+          <a href="#requirements">
+            <span>Requisitos</span>
+          </a>
+        </li>)
+      }
+      {
+        settings && (<li>
+          <a href="#settings">
+            <span>Configurações</span>
+          </a>
+        </li>)
+      }
+    </NavBar>
   );
 }
 

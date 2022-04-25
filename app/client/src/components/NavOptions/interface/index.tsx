@@ -3,5 +3,4 @@ export interface IRequest {
   settings?: boolean;
   requirements?: boolean;
   projects?: boolean;
-  pageName: string;
 }
